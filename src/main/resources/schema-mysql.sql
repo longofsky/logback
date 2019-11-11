@@ -2,7 +2,7 @@ drop table if exists UserConnection;
 create table UserConnection (userId varchar(255) not null,
                              providerId varchar(255) not null,
                              providerUserId varchar(255),
-                             rank int not null,
+                             ranke int not null,
                              displayName varchar(255),
                              profileUrl varchar(512),
                              imageUrl varchar(512),
@@ -12,7 +12,7 @@ create table UserConnection (userId varchar(255) not null,
                              expireTime bigint,
   primary key (userId, providerId, providerUserId))
   ENGINE=InnoDB DEFAULT CHARSET=utf8;
-create unique index UserConnectionRank on UserConnection(userId, providerId, rank);
+create unique index UserConnectionRank on UserConnection(userId, providerId, ranke);
 
 DROP TABLE IF EXISTS `persistent_logins`;
 CREATE TABLE `persistent_logins` (

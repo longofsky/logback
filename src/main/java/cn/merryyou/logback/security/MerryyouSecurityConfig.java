@@ -89,8 +89,8 @@ public class MerryyouSecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(merryyouLoginSuccessHandler)//登录成功处理器，返回JSON
                 .failureHandler(merryyouAuthenticationfailureHandler)//登录失败处理器
                 .and()
-                .apply(validateCodeSecurityConfig)//验证码拦截
-                .and()
+//                .apply(validateCodeSecurityConfig)//验证码拦截
+//                .and()
                 .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
                 .apply(merryyouSpringSocialConfigurer)//社交登录
